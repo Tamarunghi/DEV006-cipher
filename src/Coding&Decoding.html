@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Caesar Cipher CIFRADO</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id=" codingPgBdy">
+    <div id="cipherPg">
+
+      <div id="cipher">
+        <h id="cipherttl">CIFRADO</h>
+        <br>
+        <form id="cifradoForm">
+        <textarea id="userTextC" autocomplete="off" placeholder="Ingresa tu mensaje a cifrar aquí"></textarea>
+        <br>
+      </form>
+      <input id="offset" type= "text" autocomplete="off" placeholder="nº">
+      <br> 
+      <!-- <input id="ofsetC" type="range" value="0" min="0" max="27" oniput="numberDisplace(this.value)">
+      <p id="number">nº de desplazamiento</p> -->
+      <button id="copy" >COPIAR</button> <br>
+      <button id="bttnC">CIFRAR</button> <br>
+        <pC id ="ciphered">cifrado</pC>
+      </div>    
+      <br>
+      <div id="backIndex">
+        <a href="index.html">
+        <button id="bttnBckIndx">VOLVER</button>
+      </a>
+      </div> 
+
+    <div id="decipher"> 
+        <textarea id="userTextD" placeholder="Ingresa tu mensaje a descifrar aquí"></textarea> 
+        <input id="offset2" type= "text" autocomplete="off" placeholder="nº">      
+        <button id="bttnD">DESCIFRAR</button>      
+        <pD id ="deciphered">descifrado</pD>
+        <h id="decipherttl">DESCIFRADO</h>
+    </div>  
+
+</div>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>

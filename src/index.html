@@ -2,45 +2,53 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Caesar Cipher CIFRADO</title>
+    <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap" rel="stylesheet">
+
   </head>
-  <body>
-    <div id="cipherPg">
-
-      <div id="cipher">
-        <h id="cipherttl">CIFRADO</h>
-        <br>
-        <form id="cifradoForm">
-        <input id="userTextC" type="text" autocomplete="off" placeholder="Ingresa tu mensaje a cifrar aquí">
-        <br>
-      </form>
-      <input id="offset" type= "text" autocomplete="off" placeholder="nº">
-       <br> 
-      <!-- <input id="ofsetC" type="range" value="0" min="0" max="27" oniput="numberDisplace(this.value)">
-      <p id="number">nº de desplazamiento</p> -->
-      <button id="bttnC">Cifrar</button> <br>
-        <pC id ="ciphered">cifrado</pC>
+  <body id="indexPgBdy">
+    <div id="indexPg">
+      <div id="titleI">
+      <h1> Cifrado y descifrado para agentes super secretos de EIRL</h1>
+    </div><br>
+    <img id="cam" src="Images/201-2018603_hidden-camera-hd-png-download.png">
+      <div id="prgrf1">
+      <p1>Contamos con su discreción para mantener nuestras operaciones en secreto
+         y así tambien la suya y el resto de nuestros clientes, usted no querrá que 
+         descubran como codifica sus mensajes ¿no?</p1>
+      </div>
+      <br>
+      <div id="prgrf2">   
+      <p2>*Para mantener funcionando esta página también damos servicios a: 
+          amantes; estudiantes, para rpuebas y exámenes; traficantes; youtubers, 
+          para sus challenge y muchos más que no afectan en absolutamente nada la discreción, 
+          credibilidad y calidad de nuestro servicio.<br>Además aceptamos donaciones y 
+          funcionamos con ADS,  sino quebraríamos T.T
       </div>    
-    
-      <div id="backIndex">
-        <a href="index.html">
-        <button id="bttnBckIndx">Volver</button>
-      </a>
-      </div> 
-
-    <div id="decipher"> 
-        <h id="decipherttl">DESCIFRADO</h>
-    <br>
-        <input type="text" id="textC" placeholder="Ingresa tu mensaje a descifrar aquí">
-        <input type="text" id="ofsetD" placeholder="ingresar Nº">
-        <button id="bttnOffset">Desplazamiento</button>
-        <button id="bttnC">Descifrar</button>
-    </div>  
-
-
-
-</div>
+          <br>
+      <div id="prgrf3">    
+         <p3>ACERCA DE NOSOTROS <br> Todo comenzó muchos antes de la internet, 
+          cuando los mensajes por ondas de radio eran la mejor opción, tomamos la tecnología 
+          y lo sumamos al cifrado cesar para crear mensajes seguros. Y así nacion nuestra pyme. 
+          ubicamos nuestra humilde instalación en una bodega dentro de un bar y allí comenzamos a 
+          recibir nuestros primeros clientes.<br> Con la tecnología tuvimos que reinventarnos o 
+          quedaríamos en el olvido. Así fue como dentro de la deepweb seguimos operando hasta hoy en día
+        </p3>
+      </div>
+      <br>
+      <div id="buttons">
+        <a href="Coding&Decoding.html">
+      <button id="cipherBtn">CIFRADO/<br>DESCIFRADO</button>
+      <!-- <button id="desccipherBtn">DESCIFRADO</button> -->
+    </a>
+    <a href="Y.Donaciones.html">
+      <button id="donations">DONACIONES</button>
+    </a>
+    </div>
+    </div>
     <script src="index.js" type="module"></script>
   </body>
 </html>

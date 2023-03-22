@@ -1,0 +1,147 @@
+html{ /* aplica para las 3 páginas, así no se repite en cada div, pg, etc.*/
+    font-family: 'Goldman', cursive;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(24, 24, 26); 
+    color: white;  
+    text-shadow: 0 0 5px rgb(0, 255, 98), 0 0 4px rgb(0, 255, 98);
+}
+.indexPgBdy{ /* al colocar el padding en html afectava a todas las páginas, así que se creo una id a body de index */
+    padding: 2%;
+}
+#indexPg{
+    /* Las“unidades de longitud porcentuales de ventana de visualización” 
+    (viewport-percentage lengths) o más comúnmente llamadas viewport units.
+    Nos permite definir las dimensiones porcentuales de anchura (vw)/altura(vh) de todos los elementos que contiene. */
+    height: 100vh; 
+    width: 100vw;
+    background-color: rgb(37, 37, 41);
+    border: 3px solid white;
+   /* bx shdw no lo comprendo todavía u.u but, el 1ero es 中 y el 2do afuera (y un 3ero?)*/
+    box-shadow: inset 0 0 8px rgb(0, 255, 98), 0 0 8px rgb(0, 255, 98);
+    border-radius: 20px;
+}
+#titleI{
+    border: 3px solid white;
+    box-shadow: inset 0 0 8px rgb(0, 255, 98), 0 0 10px rgb(0, 255, 98);
+    border-radius: 20px;
+    /* dado que "titleI" es + específico que "html", txt-shdw de "titleI* es el valor a mostrar */
+    text-shadow: 0 0 8px rgb(0, 255, 98), 0 0 8px rgb(0, 255, 98);
+    height: 120px;
+    width: 400px;
+    display: grid; /* grid: casilla */
+    margin: 20px auto;
+    place-items: center;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+#cam{
+    position: flex;
+    opacity: 50%;
+    height: 200px;
+    width: auto;
+   
+  
+}
+#prgrf1,#prgrf2,#prgrf3{
+    border: 3px solid white;
+    box-shadow: inset 0 0 8px rgb(0, 255, 98), 0 0 10px rgb(0, 255, 98);
+    border-radius: 20px ; 
+    padding: 2%;    
+    display: grid;
+    margin: 0 auto;
+    height: 100px;
+    width: 800px;
+}
+p1,p2,p3{
+    text-align: start;   
+    font-size: 18px;
+}
+
+p3{
+    overflow-y: scroll;    
+} 
+button{
+    margin: 6px;
+    height: 90px;
+    width: 150px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2px;
+    background-color:rgb(37, 37, 41);        
+    border-radius: 20px;
+    border-color :white ;
+    box-shadow: inset 0 0 8px rgb(0, 255, 98), 0 0 10px rgb(0, 255, 98);
+    text-shadow: 0 0 3px rgb(0, 255, 98), 0 0 5px rgb(0, 255, 98);
+}
+#buttons{ /* falta aprender espacio entre btns */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+    margin: 0 auto; 
+    height: 100px;
+    width: 600px;
+}
+#cipherPg{
+    background: linear-gradient(to right bottom, rgb(37, 37, 41) 50%, rgb(81, 81, 85) 50.3%);
+    border: 3px solid white;
+    box-shadow: inset 0 0 8px rgb(0, 255, 98), 0 0 10px rgb(0, 255, 98);
+    border-radius: 20px ; 
+    display: flex;
+    height: 100vh;
+}    
+#cipher, #backIndex, #decipher {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    padding: 2%;
+}
+#userTextC,#userTextD{
+    height: 250px;  
+    width: 450px;  
+}
+#offset,#offset2{
+    height: 20px;  
+    width: 40px; 
+    font-size: 19px;
+}
+#bttnC,#bttnD{
+    height: 90px;
+    width: 200px;    
+}
+#cipher{
+    top:0;
+    left:0;
+    
+}
+#cipherttl,#decipherttl{
+ text-align: center;
+ font-size: 70px;  
+ letter-spacing: 2px;
+}
+#backIndex{
+    z-index: 1; /* indica el orden de un elemento siempre q no sea static */
+    top: 50%; 
+    left: 50%;
+    transform: translate(0%, -50%); /* para centrar, aunq no entiendo bn como*/
+    height: 100px;
+    width: 160px;
+}
+#bttnBckIndx{
+    height: 55px;
+    width: 95px;  
+}   
+#decipher{
+    bottom:0;
+    right:0;
+    display: flex; /* displayflex ayudar a distribuir el espacio entre
+     los ítems de una interfaz y mejorar las capacidades de alineación */
+    justify-content: flex-end; /* alinear a la derecha */
+    align-items: flex-end; /* alinear a parte inferior */
+    flex-direction: column; /* sin esto se veian horizontal */
+}
+
