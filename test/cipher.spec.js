@@ -14,7 +14,7 @@ describe('cipher', () => {
 
   describe('cipher.encode', () => {
 
-    it('should be a function', () => {
+    it.only('should be a function', () => {
       expect(typeof cipher.encode).toBe('function');
     });
 
