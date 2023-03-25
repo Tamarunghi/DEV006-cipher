@@ -14,7 +14,7 @@ describe('cipher', () => {
 
   describe('cipher.encode', () => {
 
-    it.only('should be a function', () => {
+    it('should be a function', () => {
       expect(typeof cipher.encode).toBe('function');
     });
 
@@ -29,6 +29,9 @@ describe('cipher', () => {
       expect(cipher.encode(33, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')).toBe('HIJKLMNOPQRSTUVWXYZABCDEFG');
     });
 
+    it('should return "3456789012" for "0123456789" with offset 33', () => {
+      expect(cipher.encode(33, '0123456789')).toBe('3456789012');
+    });
     // Hacker edition
     //
     // [Español]
@@ -39,9 +42,9 @@ describe('cipher', () => {
     // Se quiser adicionar testes para letras minúsculas, descomente o teste
     // abaixo.
     //
-    // it('should return "hijklmnopqrstuvwxyzabcdefg" for "abcdefghijklmnopqrstuvwxyz" with offset 33', () => {
-    //   expect(cipher.encode(33, 'abcdefghijklmnopqrstuvwxyz')).toBe('hijklmnopqrstuvwxyzabcdefg');
-    // });
+    it('should return "hijklmnopqrstuvwxyzabcdefg" for "abcdefghijklmnopqrstuvwxyz" with offset 33', () => {
+      expect(cipher.encode(33, 'abcdefghijklmnopqrstuvwxyz')).toBe('hijklmnopqrstuvwxyzabcdefg');
+    });
 
     // Hacker edition
     //
