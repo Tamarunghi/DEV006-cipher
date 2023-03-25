@@ -5,12 +5,12 @@ const cipher = {
   █    █  █▀▀ █▄▄▀ █▄▄█ █  █ █  █ 
   ▀▀▀ ▀▀▀ ▀   ▀ ▀▀ ▀  ▀ ▀▀▀  ▀▀▀▀
  */
-  encode:(userTextCArr,offset)=>{
-  /* CICLO CON MAP*/
-  /* const codedArr=> array para, con push, agregar textCoded 
+  encode:(userTextC,offset)=>{
+    const userTextCArr = userTextC.split("");
+    /* CICLO CON MAP*/
+    /* const codedArr=> array para, con push, agregar textCoded 
   fuera del ciclo y que se muestre en la pg web */  
-  const codedArr=[];
-  function Coding(userTextCArr, offset){
+    const codedArr=[];
     userTextCArr.map(letter => {
       const asciiValue = letter.charCodeAt(0);
       let codedValue;
@@ -30,8 +30,7 @@ const cipher = {
       codedArr.push(textCoded);
       return textCoded;
     }); 
-    return codedArr.join("");
-  }
+ 
 
     /* RESPUESTA EN PG*/
     /* offset.length >0 se cambió a !isNaN(offset), ya que anteriormente el 

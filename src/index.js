@@ -4,7 +4,7 @@ console.log(cipher);
 
 
 /* intento de barra de desplazamiento
-  document.getElementById("ofsetC")addEventListener("keyup",function(){
+  document.getElementById("ofsetC").addEventListener("keyup",function(){
     ofsetCV= ofsetC.value
     document.getElementById("number").innerHTML= ofsetCV
   }) */
@@ -33,9 +33,9 @@ document.getElementById("bttnC").addEventListener("click", function(){
   const userTextC = userTextCE.value;
   /* parseInt convierte string a número sino el offset no f(na)*/
   const offset = parseInt(offsetE.value);
-  const userTextCArr = userTextC.split("");
   
-  const answer = cipher.encode(offset,userTextCArr)
+  
+  const answer = cipher.encode(userTextC,offset)
   cipheredE.innerHTML = answer;
 })    
 
@@ -62,7 +62,7 @@ document.getElementById("bttnD").addEventListener("click", function(){
   const userTextD = userTextDE.value;
   const offset2 = parseInt(offset2E.value);
   const userTextDArr = userTextD.split("");
-  const answer2 = cipher.decode(offset2,userTextDArr) 
+  const answer2 = cipher.decode(userTextDArr,offset2) 
   decipheredE.innerHTML = answer2
 
 })
