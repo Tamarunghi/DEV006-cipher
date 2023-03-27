@@ -6,42 +6,55 @@ const cipher = {
   ▀▀▀ ▀▀▀ ▀   ▀ ▀▀ ▀  ▀ ▀▀▀  ▀▀▀▀
  */
   encode:(userTextC,offset)=>{
-    const userTextCArr = userTextC.split("");
+    console.log(userTextC,typeof userTextC)
+    console.log(offset,typeof offset)
+
+  
+      if (userTextC=== undefined || offset===undefined){
+        throw new TypeError ("ERROR")
+      } else if(userTextC=== typeof 0 || offset===0){
+        throw new TypeError ("ERROR")
+      }
+
+    const userTextCArr = userTextC.toString().split("");
+    console.log(userTextCArr)
     /* CICLO CON MAP*/
     /* const codedArr=> array para, con push, agregar textCoded 
   fuera del ciclo y que se muestre en la pg web */  
     const codedArr=[];
     userTextCArr.map(letter => {
+      console.log(letter)
       const asciiValue = letter.charCodeAt(0);
+      console.log(asciiValue)
       let codedValue;
       /* letras mayúsculas*/
       if ( asciiValue >= 65 && asciiValue <=90){
         codedValue = (asciiValue -65 + offset)%26+65; 
-      /* letras minúsculas*/
+        console.log(codedValue)
+        /* letras minúsculas*/
       } else if (asciiValue >= 97 && asciiValue <=122){
         codedValue = (asciiValue -97 + offset)%26+97;
-      /* números*/
+        console.log(codedValue)
+        /* números*/
       } else if (asciiValue >= 48 && asciiValue <=57){
         codedValue = (asciiValue -48 + offset)%10+48;
+        console.log(codedValue)
       }else {
         codedValue=asciiValue;
+        console.log(codedValue)
       }
       const textCoded = String.fromCharCode(codedValue); 
+      console.log(textCoded)
       codedArr.push(textCoded);
-      return textCoded;
+      //   return textCoded;
     }); 
  
-
-    /* RESPUESTA EN PG*/
-    /* offset.length >0 se cambió a !isNaN(offset), ya que anteriormente el 
-      offset se cambio de string a number con parsInt y length funciona solo con string*/
-    if (userTextCArr.length >0 && !isNaN(offset)){
+    console.log(codedArr)
+    console.log(codedArr.join(""))
       /* sea grega join ya que al cifrar mensaje se cambio string a array, join lo 
-          vuelve a convertir en string*/
+      vuelve a convertir en string*/
       return codedArr.join("");
-    } else {
-      return "Por favor escriba mensaje";
-    } 
+      
   },
 
 
@@ -50,8 +63,11 @@ const cipher = {
 █  █ █▀▀ ▀▀█ █    █  █▀▀ █▄▄▀ █▄▄█ █  █ █  █ 
 ▀▀▀  ▀▀▀ ▀▀▀ ▀▀▀ ▀▀▀ ▀   ▀ ▀▀ ▀  ▀ ▀▀▀  ▀▀▀▀
 */
-  decode:(userTextDArr,offset2)=>{
+  decode:(userTextD,offset2)=>{
+    console.log(userTextD,typeof userTextD)
+    console.log(offset2,typeof offset2)
 
+    const userTextDArr = userTextD.toString().split("");
     const decodedArr=[]
     userTextDArr.map(letter => {
       const asciiValue = letter.charCodeAt(0);
@@ -72,7 +88,8 @@ const cipher = {
       decodedArr.push(textCoded);
       return textCoded;
     });   
-
+    /* offset.length >0 se cambió a !isNaN(offset), ya que anteriormente el 
+      offset se cambio de string a number con parsInt y length funciona solo con string*/
     if (userTextDArr.length >0 && !isNaN(offset2)){
       return decodedArr.join("");
     } else {
